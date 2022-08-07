@@ -10,9 +10,9 @@ if(!isset($_SESSION["login"])){
 require "function.php";
 $mydata = query ("SELECT * FROM tugas");
 //jika tombol  cari di tekan
-if (isset($_POST["cari"])){
-    $mydata=cari($_POST["keyword"]);
-}
+// if (isset($_POST["cari"])){
+//     $mydata=cari($_POST["keyword"]);
+// }
 
 $no=1;
 ?>
@@ -29,6 +29,7 @@ $no=1;
 
 </head>
 <body style="height:1000px">
+<div id="tabel">
 <div class="logout" style="position:relative;left:1200px;top:40px;">
     <a href="logout.php" class="btn btn-danger">logout</a>
 </div>
@@ -76,12 +77,13 @@ $no=1;
 
     </form>
     </div>
+</div>
 <br>
 <br>
 <div class="pencarian" style="position:relative;left:40px;">
 <form action="" method="post">
-<input type="text" size="40" name="keyword" class="form" placeholder="masukkan kata kunci" autofocus autocomplete="off">
-<button type="submit" name="cari" style="background-color:black;color:white;">cari</button>
+<input type="text" size="40" name="keyword" class="form" id="keyword" placeholder="masukkan kata kunci" autofocus autocomplete="off">
+<button type="submit" name="cari" style="background-color:black;color:white;" id="cari">cari</button>
 </form>
 </div>
 
@@ -115,9 +117,6 @@ $no=1;
         <?php  endforeach ;?>
     </tbody>
     </table>
-<script>
-    
-</script>
-
+<script src="script.js" type="text/javascript"></script>
 </body>
 </html>

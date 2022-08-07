@@ -74,14 +74,14 @@ function edit($edit) {
     return mysqli_affected_rows($conn);
 }
 
-function cari($keyword){
-    $query= "SELECT * FROM tugas 
-                WHERE 
-                nama LIKE  '%$keyword%' OR
-                kelas LIKE '%$keyword%'  OR
-                nim LIKE '%$keyword%' ";
-return query($query);
-}
+// function cari($keyword){
+//     $query= "SELECT * FROM tugas 
+//                 WHERE 
+//                 nama LIKE  '%$keyword%' OR
+//                 kelas LIKE '%$keyword%'  OR
+//                 nim LIKE '%$keyword%' ";
+// return query($query);
+// }
 
 function registrasi( $data ) {
     global $conn ;
