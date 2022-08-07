@@ -25,10 +25,11 @@ $no=1;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengumpulan Tugas</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.scss">
 
 
 </head>
-<body style="height:1000px">
+<body style="height:1000px" class="body">
 <div id="tabel">
 <div class="logout" style="position:relative;left:1200px;top:40px;">
     <a href="logout.php" class="btn btn-danger">logout</a>
@@ -83,7 +84,7 @@ $no=1;
 <div class="pencarian" style="position:relative;left:40px;">
 <form action="" method="post">
 <input type="text" size="40" name="keyword" class="form" id="keyword" placeholder="masukkan kata kunci" autofocus autocomplete="off">
-<button type="submit" name="cari" style="background-color:black;color:white;" id="cari">cari</button>
+<button type="submit" name="cari" style="background-color:black;color:white;border-radius:9px black;width:80px" id="cari">SEARCH</button>
 </form>
 </div>
 
